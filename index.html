@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<style>
+    .arriba {
+        background-color: rgb(57, 57, 231);
+        padding: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        font-weight: 900;
+        font-size: 18px; }
+
+    .arriba div {
+        padding: 8px;
+        color: white;
+       }
+
+   
+    .tecnologia {
+               font-family: 'Courier New', Courier, monospace;
+        font-size: 24px;
+        color: rgb(57, 57, 212);
+        padding: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-shadow: 0 0px 5px rgb(170, 192, 144), 0 0px 5px rgb(44, 23, 178), 0 0px 5px rgb(28, 23, 178);    }
+
+
+    
+
+    
+
+    header {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .limitador {
+        display: flex;
+        gap: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(57, 57, 212);
+    }
+
+    * {
+        padding: 0;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    .contenedorfijo {
+        width: 400px;
+        border: 5px solid navy;
+        overflow: hidden;
+    }
+
+    .contenedordesplegable {
+        display: flex;
+        width: 1600px;
+        gap: 10px;
+        animation-name: movering;
+        animation-duration: 16s;
+        animation-iteration-count: 3;
+        animation-direction: alternate;
+    }
+
+    li {
+        list-style: none;
+        width: 400px;
+        height: 200px;
+        background-color: skyblue;
+    }
+
+    @keyframes movering {
+        0% {
+            transform: translateX(0);
+        }
+
+        25% {
+            transform: translateX(-25%);
+        }
+
+        50% {
+            transform: translateX(-50%);
+        }
+
+        75% {
+            transform: translateX(-75%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .desplazable {
+        margin: 100px;
+
+    }
+
+
+            img {
+            width: 500px;
+            height: 500px;
+            display: flex;
+        }
+
+        .O {
+            width: 100%;
+        }
+
+        .card {
+            grid-template-columns: 3px solid black;
+            display: flex;
+            box-shadow: 0 0 4px 4px;
+           
+
+            width: 70vw;
+            margin: auto;
+            padding: 18px;
+            
+            
+
+        }
+
+     
+        .letraresaltado a{
+            color: beige;
+        }
+
+      
+
+        .texto {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            line-height: 1.5;
+            gap: 20px;
+        }
+
+        .precio {
+            color: blue;
+            font-weight: 900;
+        }
+
+
+        .letraresaltado {
+            
+            margin: auto;
+            border: none;
+            background-color: rgb(42, 158, 207);
+           font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+           border-radius: 10px;
+           transition: all .4s;
+        }
+        .letraresaltado:hover{
+            background-color: green;
+        }
+        
+
+        .imagen {
+            grid-template-rows: 1, 1fr;
+
+        }
+
+        .texto {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            
+        }
+            
+        p{
+            line-height: 1.5;
+        }
+
+        .precio {
+            color: blue;
+            font-weight: 900;
+            font-size: 26px;
+            
+        }
+            .cero {
+        width: 100%;
+        height: 100%;
+    }
+
+
+a{
+    text-decoration: none;
+    color: rgb(30, 30, 209);
+}
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+        margin-bottom: 90px;
+        }
+        .contenedor{
+            width: 90vw;
+            margin: 50px auto;
+            height: 400px;
+            display: flex;
+            overflow-x: auto ;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            anchor-name: --mic;
+            box-shadow: 0 0 10px;
+            padding: 20px;
+           scroll-marker-group: after;
+            
+        }
+     .contenedor::scroll-marker-group{
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+     }.item{
+            width: 250px;
+            height: 150px;
+            background-color:skyblue;
+            flex: 0 0 180px;
+            text-align: center;
+            border-radius: 20%;
+            flex-shrink: 0;
+            flex-grow: 0;
+            flex-basis: 250px;
+            scroll-snap-align: start;
+            display: flex;
+        }
+        .item::scroll-marker{
+            content: "";
+            height: 20px;
+            width: 20px;
+            background-color: aquamarine;
+            border-radius: 50%;
+            
+        }
+        .contenedor::scroll-marker:tarjet-current{
+            background-color: skyblue;
+        }
+        .contenedor::webkit-scrollbar{
+            display: none;
+        }
+        .contenedor::scroll-button(right){
+            content:'→';
+            font-size:20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: aqua;
+            color: aliceblue;
+            cursor: pointer;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: bold;
+            position: fixed;
+            border: none;
+            position-anchor: --mic;
+            position-area: center right;
+           transform: translateX(-50%);
+        }
+        .contenedor::scroll-button(left):disabled{
+opacity: 0.5;
+cursor: auto;
+        }
+    
+         .contenedor::scroll-button(left){
+            content:'←';
+            font-size:20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: aqua;
+            color: aliceblue;
+            cursor: pointer;
+            position: fixed;
+            position-anchor: --mic;
+            position-area: center left;
+        }
+        .contenedor::scroll-button(:right):disabled{
+opacity: 0.5;
+cursor: auto;
+        }
+            @media(max-width: 968px) {
+        .card {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .imagen {
+            width: 100%;
+            height: auto;
+        }
+
+        .texto {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+ }
+
+        @media(max-width:500px){
+            .card{
+                flex: 0  0 100%;
+            }
+        }
+        img{
+            width: 250px;
+            height: 300px;
+        }
+        a{
+            display: block;
+
+        }
+        .j{
+            margin-top: 100px;
+        }
+ nav{
+    flex-wrap: wrap;
+ }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mitienda</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    
+    <div class="arriba">
+        <div>Tecnologia sin vueltas .</div>
+        <div>Envios a todo el pais .</div>
+        <div>12 cuotas .</div>
+        <div>Tarjetas de todos los bancos .</div>
+        <div>Asesoramiento personalizado</div>
+    </div>
+    <header class="limitador">
+        <div class="tecnologia"><strong>Tienda</strong> Tecno</div>
+        <div class="buscador">
+            <input type="text" placeholder="cual es tu duda?">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="usuario">
+            <i class="fa-solid fa-user"></i>
+            <span>ingresa/registrate</span>
+        </div>
+
+        <div><i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-whatsapp"></i>
+            <i class="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>carrito</span>
+        </div>
+        <nav>
+              <a href="tele.html">televisores</a>
+             
+        </nav>
+      
+    </header>
+<img class="cero" src="CATEGORIA-NOTEBOOK.png" alt="notebook">
+
+    
+<div class="contenedor">
+        <a href="#net1"><figure class="item"><img src="h.jpg" alt="l"></figure></a>
+        
+        <a href="#net2"><figure class="item"><img src="i.jpg" alt="l"></figure></a>
+        
+        <a href="#net3"><figure class="item"><img src="l.webp" alt="l"></figure></a>
+        
+        <a href="#net4"><figure class="item"><img src="p.jpg" alt="l"></figure></a>
+       
+        <a href="#net5"><figure class="item"><img src="f.webp" alt="l"></figure></a>
+        
+        <a href="#net6"><figure class="item"><img src="k.webp" alt="l"></figure></a>
+        
+        <a href="#net7"><figure class="item"><img src="tv.jpg" alt="l"></figure></a>
+        
+        <a href="#net8"><figure class="item"><img src="u.jpg" alt="l"></figure></a>
+    
+   
+</div>
+
+
+    <h1>Notebooks / Laptops</h1>
+<section id="net4">
+    <div class="card j">
+        <img class="imagen" src="p.jpg" alt="notebook">
+        <div class="texto">
+            <h2>Notebook Hp 245 G10 14 Ryzen 5 7530U 8GB 512GB Win11</h2>
+            <p>Descubrí el <span >rendimiento</span> y la eficiencia con nuestra laptop equipada
+                con el procesador AMD Ryzen™ 5 7530U y
+                gráficos AMD Radeon™. Esta combinación te ofrece una potencia inigualable para manejar tareas diarias,
+                trabajos exigentes y experiencias multimedia sin esfuerzo.</p>
+            <span class="precio">1.200000</span>
+            <button class="letraresaltado"><a href="carrito.html">comprar</a></button>
+        </div>
+    
+    </div>
+</section>
+    <section id="net3"><div class="card"><img src="l.webp" alt="notebook">
+        <div class="texto">
+            <h2>Microsoft Windows 11</h2>
+            <p> Es la versión más reciente del sistema operativo de Microsoft, caracterizada por un diseño visual
+                renovado con menús centrados. Introduce herramientas avanzadas de productividad, una profunda
+                integración de Inteligencia Artificial mediante Copilot y mejoras drásticas en seguridad. Está
+                optimizado para videojuegos de última generación y requiere hardware moderno con chip de seguridad TPM
+                2.0.</p>
+            <span class="precio">$179.999,00 ARS</span>
+            <button class="letraresaltado"><a href="carrito.html">comprar</a></button>
+        </div>
+    </section>
+    <section id="net2"><div class="card"><img src="i.jpg" alt="notebook">
+        <div class="texto">
+            <h2>notebook ASUS Vivobook Go 15</h2>
+            <p> Notebook ASUS Vivobook Go 15 es una opción ideal para el uso diario, el estudio o el trabajo en
+                movimiento gracias a su diseño ultraliviano de 1,63 kg. Equipamiento equilibrado que incluye una
+                pantalla Full HD de 15,6 pulgadas con tecnología antirreflejo, un procesador Intel N100 y 256 GB de
+                almacenamiento SSD para un rendimiento fluido. Su batería duradera se complementa con conectividad
+                avanzada Wi-Fi 6E y puertos modernos como USB-C y HDMI para una máxima versatilidad.</p>
+            <span class="precio">$600.000</span>
+            <button class="letraresaltado"><a href="carrito.html">comprar</a></button>
+        </div></section>
+    
+   <section id="net1"><div class="card"><img src="h.jpg" alt="notebook">
+        <div class="texto">
+            <h2>lenovo ideapad slim 3 gen 8</h2>
+            <p> La Lenovo IdeaPad Slim 3 Gen 8 es una laptop delgada y liviana ideal para estudiar o trabajar todos los
+                días. Viene con una pantalla nítida de 15.6 pulgadas y procesadores rápidos AMD o Intel. Ofrece buena
+                velocidad gracias a su memoria RAM y almacenamiento seguro en disco sólido. Además, incluye batería de
+                carga rápida y cámara web con tapa de privacidad.
+            </p>
+            <span class="precio">$1.300.000</span>
+            <button class="letraresaltado"><a href="carrito.html">comprar</a></button>
+        </div></section>
+    
+    
+
+
+
+
+</body>
+</html>

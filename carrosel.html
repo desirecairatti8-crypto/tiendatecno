@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            height: 100vh;
+        }
+        .contenedor{
+            width: 90vw;
+            margin: 50px auto;
+            height: 400px;
+            display: flex;
+            overflow-x: auto ;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            anchor-name: --mic;
+            box-shadow: 0 0 10px;
+            padding: 20px;
+           scroll-marker-group: after;
+            
+        }
+     .contenedor::scroll-marker-group{
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+     }.item{
+            width: 250px;
+            height: 150px;
+            background-color:skyblue;
+            flex: 0 0 180px;
+            text-align: center;
+            border-radius: 20%;
+            flex-shrink: 0;
+            flex-grow: 0;
+            flex-basis: 250px;
+            scroll-snap-align: start;
+        }
+        .item::scroll-marker{
+            content: "";
+            height: 20px;
+            width: 20px;
+            background-color: aquamarine;
+            border-radius: 50%;
+        }
+        .contenedor::scroll-marker:tarjet-current{
+            background-color: skyblue;
+        }
+        .contenedor::webkit-scrollbar{
+            display: none;
+        }
+        .contenedor::scroll-button(right){
+            content:'→';
+            font-size:20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: aqua;
+            color: aliceblue;
+            cursor: pointer;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: bold;
+            position: fixed;
+            border: none;
+            position-anchor: --mic;
+            position-area: center right;
+           transform: translateX(-50%);
+        }
+        .contenedor::scroll-button(left):disabled{
+opacity: 0.5;
+cursor: auto;
+        }
+    
+         .contenedor::scroll-button(left){
+            content:'←';
+            font-size:20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: aqua;
+            color: aliceblue;
+            cursor: pointer;
+            position: fixed;
+            position-anchor: --mic;
+            position-area: center left;
+        }
+        .contenedor::scroll-button(:right):disabled{
+opacity: 0.5;
+cursor: auto;
+        }
+        @media(max-width:500px){
+            .card{
+                flex: 0  0 100%;
+            }
+        }
+        img{
+            width: 250px;
+            height: 300px;
+        }
+        a
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <a href="#net1"><figure class="item"><img src="h.jpg" alt="l"></figure></a>
+    <figure class="item"><img src="i.jpg" alt="i"></figure>
+    <figure class="item"><img src="l.webp" alt="l"></figure>
+    <figure class="item"><img src="p.jpg" alt="p"></figure>1
+    <figure class="item"><img src="f.webp" alt="f"></figure>
+    <figure class="item"><img src="k.webp" alt="k"></figure>
+    <figure class="item"><img src="tv.jpg" alt="tv"></figure>
+    <figure class="item"><img src="u.jpg" alt="u"></figure>
+   
+</div>
+
+<section  id="net11">
+    <h3>net34</h3>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque natus architecto animi ut in sequi veniam non ipsam consequatur voluptates sapiente eaque, distinctio eveniet praesentium illum voluptas veritatis quos asperiores!
+</section>
+<section  id="net2">
+    <h3>78</h3>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque natus architecto animi ut in sequi veniam non ipsam consequatur voluptates sapiente eaque, distinctio eveniet praesentium illum voluptas veritatis quos asperiores!
+</section>
+<section  id="net3">
+    <h3>net3</h3>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque natus architecto animi ut in sequi veniam non ipsam consequatur voluptates sapiente eaque, distinctio eveniet praesentium illum voluptas veritatis quos asperiores!
+</section>
+<section  id="net1">
+    <h3>net1</h3>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque natus architecto animi ut in sequi veniam non ipsam consequatur voluptates sapiente eaque, distinctio eveniet praesentium illum voluptas veritatis quos asperiores!
+</section>
+</body>
+</html>

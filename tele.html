@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+         section{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+         }
+        img {
+            width: 500px;
+            height: 500px;
+            display: flex;
+        }
+
+        .cero {
+            width: 100%;
+        }
+h1{
+    margin:40px ;
+}
+          .card {
+            grid-template-columns: 3px solid black;
+            display: flex;
+            box-shadow: 0 0 4px 4px;
+           
+
+            width: 70vw;
+            margin: auto;
+            padding: 18px;
+           
+            
+
+        }
+
+
+    
+
+   
+    .texto {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            align-items: center;
+            
+            gap: 20px;
+        }
+
+        .precio {
+            color: blue;
+            font-weight: 900;
+        }
+
+
+   
+
+        p{
+             line-height: 1.5;
+        }
+
+    
+            @media(max-width: 968px) {
+        .card {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .imagen {
+            width: 100%;
+            height: auto;
+        }
+
+        .texto {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+ }
+        a {
+            text-decoration: none;
+            color: rgb(30, 30, 209);
+            display: flex;
+            justify-content: end;
+            margin: 40px;
+            font-size: 28px;
+
+            
+        }
+        .letraresaltado {
+            
+            margin: auto;
+            border: none;
+            background-color: rgb(42, 158, 207);
+           font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+           border-radius: 10px;
+           transition: all .4s;
+        }
+        .letraresaltado:hover{
+            background-color: green;
+        }
+        .letraresaltado a{
+            color: aliceblue;
+        }
+        .precio {
+            
+            font-weight: 900;
+            font-size: 26px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <img class="cero" src="Sala multimedia futurista con TV de neón.png" alt="televisor">
+     <nav>
+              <a href="index.html">Notebook</a>
+             
+        </nav>
+    <h1>Televisores</h1>
+   
+    <section>
+        <div class="card">
+        <img class="imagen" src="tv.jpg" alt="tele">
+        <div class="texto">
+            <h2>Televisor Smart TV Samsung de 43 pulgadas con pantalla LED de alta definición y conectividad Wi-Fi para
+                aplicaciones de streaming.</h2>
+            <span class="precio">$600.000 ARS</span>
+            <button class="letraresaltado"><a href="carrito.html">comprar</a></button>
+        </div>
+    </div>
+    <div class="card"><img src="w.jpg" alt="tele">
+        <div class="texto">
+            <h2>Smart TV Philips </h2>
+            <p> Tiene 43 pulgadas con pantalla LED Full HD y sistema operativo Titan OS con aplicaciones
+                de streaming integradas.</p>
+            <span class="precio">$490.000 ARS.</span>
+            <button class="letraresaltado"><a href="carrito.html">comprar</a></button>
+        </div>
+    </div>
+    <div class="card"><img src="k.webp" alt="tele">
+        <div class="texto">
+            <h2>Smart TV Samsung </h2>
+            <p>de 32 pulgadas con pantalla Full HD y sistema operativo Tizen, ideal para plataformas
+                de streaming. </p>
+            <span class="precio">$450.000 ARS</span>
+            <button class="letraresaltado"><a href="carrito.html">comprar</a></button>
+        </div>
+    </div>
+    </div>
+    <div class="card"><img src="f.webp" alt="tele">
+        <div class="texto">
+            <h2>
+                Smart TV Noblex
+            </h2>
+            <p>Tiene 50 pulgadas con pantalla LED de resolución 4K Ultra HD y sistema operativo Google TV
+                para aplicaciones como Disney+.</p>
+            <span class="precio">$810.000 ARS nuevo</span>
+            <button class="letraresaltado"><a href="carrito.html">comprar</a></button>
+        </div>
+    </div>
+
+    </section>
+
+
+</body>
+
+</html>
